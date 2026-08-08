@@ -1,1 +1,364 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>Maisar Lingkuang Aua Jambak</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f7f5;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #087f23, #16a34a);
+      color: white;
+      padding: 25px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      font-size: 17px;
+    }
+
+    nav {
+      background: #075c1c;
+      padding: 12px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #ffd700;
+    }
+
+    .hero {
+      min-height: 420px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 20px;
+      background:
+        linear-gradient(rgba(0,80,20,.65), rgba(0,80,20,.65)),
+        url("assets/visi-misi-poster.png") center/cover;
+      color: white;
+    }
+
+    .hero-content {
+      max-width: 850px;
+    }
+
+    .hero h2 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 19px;
+      margin-bottom: 25px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background: #ffd700;
+      color: #222;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+    }
+
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 55px 20px;
+    }
+
+    section h2 {
+      text-align: center;
+      color: #087f23;
+      margin-bottom: 30px;
+      font-size: 30px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,.08);
+    }
+
+    .card h3 {
+      color: #087f23;
+      margin-bottom: 10px;
+    }
+
+    .visi-img {
+      width: 100%;
+      max-width: 700px;
+      display: block;
+      margin: 20px auto;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0,0,0,.15);
+    }
+
+    .program-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .program {
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,.08);
+      text-align: center;
+    }
+
+    .program span {
+      display: block;
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+      margin: 0 auto 15px;
+      background: #087f23;
+      color: white;
+      border-radius: 50%;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,.12);
+    }
+
+    .music {
+      background: #e8f5e9;
+      padding: 20px;
+      border-radius: 15px;
+      margin-bottom: 15px;
+    }
+
+    .music h3 {
+      color: #087f23;
+      margin-bottom: 10px;
+    }
+
+    audio {
+      width: 100%;
+    }
+
+    footer {
+      background: #075c1c;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    @media (max-width: 600px) {
+      .hero h2 {
+        font-size: 30px;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 5px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>MAISAR LINGKUANG AUA JAMBAK</h1>
+    <p>Bersama Membangun Nagari</p>
+  </header>
+
+  <nav>
+    <a href="#beranda">Beranda</a>
+    <a href="#profil">Profil</a>
+    <a href="#visi-misi">Visi & Misi</a>
+    <a href="#program">Program</a>
+    <a href="#kegiatan">Kegiatan</a>
+    <a href="#musik">Musik</a>
+  </nav>
+
+  <section class="hero" id="beranda">
+    <div class="hero-content">
+      <h2>MAISAR LINGKUANG AUA JAMBAK</h2>
+      <p>
+        Bersama membangun nagari dengan semangat kebersamaan,
+        pelayanan dan kemajuan masyarakat.
+      </p>
+      <a href="#profil" class="btn">Kenali Lebih Dekat</a>
+    </div>
+  </section>
+
+  <section id="profil">
+    <h2>Profil Singkat</h2>
+
+    <div class="card">
+      <h3>Tentang Maisar Lingkuang Aua Jambak</h3>
+      <p>
+        Website ini menjadi media informasi dan komunikasi untuk
+        memperkenalkan gagasan, visi, misi, program serta kegiatan
+        Maisar Lingkuang Aua Jambak kepada masyarakat.
+      </p>
+    </div>
+  </section>
+
+  <section id="visi-misi">
+    <h2>Visi & Misi</h2>
+
+    <div class="card">
+      <img
+        src="assets/visi-misi-poster.png"
+        alt="Visi dan Misi"
+        class="visi-img"
+      >
+    </div>
+  </section>
+
+  <section id="program">
+    <h2>5 Program Unggulan</h2>
+
+    <div class="program-grid">
+
+      <div class="program">
+        <span>1</span>
+        <h3>Pelayanan Masyarakat</h3>
+        <p>
+          Meningkatkan pelayanan yang mudah, cepat dan terbuka
+          bagi seluruh masyarakat.
+        </p>
+      </div>
+
+      <div class="program">
+        <span>2</span>
+        <h3>Pembangunan Nagari</h3>
+        <p>
+          Mendorong pembangunan yang merata dan bermanfaat
+          bagi masyarakat.
+        </p>
+      </div>
+
+      <div class="program">
+        <span>3</span>
+        <h3>Pemberdayaan Masyarakat</h3>
+        <p>
+          Meningkatkan peran serta masyarakat dalam membangun
+          nagari secara bersama-sama.
+        </p>
+      </div>
+
+      <div class="program">
+        <span>4</span>
+        <h3>Ekonomi Masyarakat</h3>
+        <p>
+          Mendorong berkembangnya potensi ekonomi dan usaha
+          masyarakat nagari.
+        </p>
+      </div>
+
+      <div class="program">
+        <span>5</span>
+        <h3>Generasi & Kebudayaan</h3>
+        <p>
+          Mendukung generasi muda serta menjaga adat,
+          budaya dan nilai-nilai kehidupan masyarakat.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="kegiatan">
+    <h2>Kegiatan</h2>
+
+    <div class="gallery">
+      <img src="assets/kegiatan-01.jpg" alt="Kegiatan 1">
+      <img src="assets/kegiatan-02.jpg" alt="Kegiatan 2">
+      <img src="assets/kegiatan-03.jpg" alt="Kegiatan 3">
+    </div>
+  </section>
+
+  <section id="musik">
+    <h2>Musik</h2>
+
+    <div class="music">
+      <h3>Bersatu Membangun Nagari</h3>
+      <audio controls>
+        <source
+          src="assets/(regge) BERSATU MEMBANGUN NAGARI.mp3"
+          type="audio/mpeg">
+      </audio>
+    </div>
+
+    <div class="music">
+      <h3>Melangkah Bersama Maisar</h3>
+      <audio controls>
+        <source
+          src="assets/(regge) MELANGKAH BERSAMA MAISAR.mp3"
+          type="audio/mpeg">
+      </audio>
+    </div>
+
+    <div class="music">
+      <h3>Maisar Pilihan Kita</h3>
+      <audio controls>
+        <source
+          src="assets/(remix) MAISAR PILIHAN KITA.mp3"
+          type="audio/mpeg">
+      </audio>
+    </div>
+
+  </section>
+
+  <footer>
+    <p><strong>MAISAR LINGKUANG AUA JAMBAK</strong></p>
+    <p>Bersama Membangun Nagari</p>
+    <p>&copy; 2026</p>
+  </footer>
+
+</body>
+</html>
