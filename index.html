@@ -2,540 +2,406 @@
 <html lang="id">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Maisar Lingkuang Aua Jambak</title>
+<title>Maisar Lingkuang Aua Jambak</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<style>
 
-    html {
-      scroll-behavior: smooth;
-    }
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f4f7f4;
-      color: #222;
-      line-height: 1.6;
-    }
+html {
+    scroll-behavior: smooth;
+}
 
-    /* HEADER */
-    header {
-      background: linear-gradient(135deg, #087a32, #18a94d);
-      color: white;
-      text-align: center;
-      padding: 35px 20px;
-    }
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7f5;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* HEADER */
+
+header {
+    background: linear-gradient(135deg, #087f23, #16a34a);
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+header h1 {
+    font-size: 34px;
+    margin-bottom: 8px;
+}
+
+header p {
+    font-size: 18px;
+}
+
+/* MENU */
+
+nav {
+    background: #075c1c;
+    padding: 14px 10px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    margin: 5px 10px;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+nav a:hover,
+nav a.active {
+    background: #ffd700;
+    color: #222;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 500px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 50px 20px;
+
+    background:
+        linear-gradient(
+            rgba(0,80,20,.65),
+            rgba(0,80,20,.65)
+        ),
+        url("assets/visi-misi-poster.png")
+        center/cover;
+
+    color: white;
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.hero h2 {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+
+    padding: 13px 25px;
+
+    background: #ffd700;
+    color: #222;
+
+    text-decoration: none;
+
+    border-radius: 30px;
+
+    font-weight: bold;
+
+    margin: 5px;
+}
+
+.btn:hover {
+    background: white;
+}
+
+/* SECTION */
+
+section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 60px 20px;
+}
+
+section h2 {
+    text-align: center;
+    color: #087f23;
+    margin-bottom: 30px;
+    font-size: 32px;
+}
+
+/* CARD */
+
+.card {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,.08);
+
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    color: #087f23;
+    margin-bottom: 12px;
+}
+
+/* PROGRAM */
+
+.program-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 20px;
+}
+
+.program {
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,.08);
+
+    text-align: center;
+}
+
+.program span {
+
+    display: block;
+
+    width: 55px;
+    height: 55px;
+
+    line-height: 55px;
+
+    margin: 0 auto 15px;
+
+    background: #087f23;
+
+    color: white;
+
+    border-radius: 50%;
+
+    font-size: 22px;
+
+    font-weight: bold;
+}
+
+/* GALERI */
+
+.gallery {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 20px;
+}
+
+.gallery img {
+
+    width: 100%;
+
+    height: 230px;
+
+    object-fit: cover;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 4px 15px rgba(0,0,0,.12);
+}
+
+/* MUSIK */
+
+.music {
+
+    background: #e8f5e9;
+
+    padding: 22px;
+
+    border-radius: 15px;
+
+    margin-bottom: 15px;
+}
+
+.music h3 {
+    color: #087f23;
+    margin-bottom: 10px;
+}
+
+audio {
+    width: 100%;
+}
+
+/* FOOTER */
+
+footer {
+
+    background: #075c1c;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 30px 20px;
+
+    margin-top: 30px;
+}
+
+/* MOBILE */
+
+@media (max-width:600px) {
 
     header h1 {
-      font-size: 36px;
-      margin-bottom: 8px;
-      font-weight: 800;
-      letter-spacing: 1px;
+        font-size: 25px;
     }
 
-    header p {
-      font-size: 18px;
-    }
-
-    /* NAVIGASI */
-    nav {
-      background: #056525;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    nav li {
-      margin: 0;
-    }
-
-    nav a {
-      display: block;
-      color: white;
-      text-decoration: none;
-      padding: 15px 18px;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-    nav a:hover {
-      background: #f4c400;
-      color: #111;
-    }
-
-    /* UMUM */
-    section {
-      padding: 65px 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    section h2 {
-      text-align: center;
-      color: #087a32;
-      margin-bottom: 30px;
-      font-size: 30px;
-    }
-
-    /* HERO */
     .hero {
-      max-width: none;
-      min-height: 500px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      background:
-        linear-gradient(rgba(0, 80, 35, 0.82), rgba(0, 110, 45, 0.82)),
-        linear-gradient(135deg, #087a32, #18a94d);
-      color: white;
-      padding: 80px 20px;
-    }
-
-    .hero-content {
-      max-width: 850px;
+        min-height: 420px;
     }
 
     .hero h2 {
-      color: white;
-      font-size: 42px;
-      margin-bottom: 20px;
-      text-transform: uppercase;
+        font-size: 30px;
     }
 
     .hero p {
-      font-size: 20px;
-      margin-bottom: 30px;
-    }
-
-    .hero-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      display: inline-block;
-      background: #f4c400;
-      color: #111;
-      text-decoration: none;
-      padding: 13px 25px;
-      border-radius: 30px;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-    .btn:hover {
-      transform: translateY(-3px);
-      background: white;
-    }
-
-    .btn-outline {
-      background: transparent;
-      color: white;
-      border: 2px solid white;
-    }
-
-    .btn-outline:hover {
-      background: white;
-      color: #087a32;
-    }
-
-    /* CARD */
-    .card {
-      background: white;
-      border-radius: 15px;
-      padding: 30px;
-      margin-bottom: 25px;
-      box-shadow: 0 5px 18px rgba(0,0,0,0.08);
-    }
-
-    .card h3 {
-      color: #087a32;
-      margin-bottom: 15px;
-      font-size: 23px;
-    }
-
-    .card p {
-      font-size: 17px;
-    }
-
-    /* VISI MISI */
-    .visi-img {
-      display: block;
-      width: 100%;
-      max-width: 800px;
-      margin: auto;
-      border-radius: 12px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-    }
-
-    /* PROGRAM */
-    .program-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-    }
-
-    .program {
-      background: white;
-      padding: 25px;
-      border-radius: 15px;
-      box-shadow: 0 5px 18px rgba(0,0,0,0.08);
-      border-left: 5px solid #087a32;
-    }
-
-    .program span {
-      display: inline-flex;
-      width: 40px;
-      height: 40px;
-      align-items: center;
-      justify-content: center;
-      background: #087a32;
-      color: white;
-      border-radius: 50%;
-      font-weight: bold;
-      margin-bottom: 12px;
-    }
-
-    .program h3 {
-      color: #087a32;
-      margin-bottom: 10px;
-    }
-
-    /* GALERI */
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
-
-    .gallery img {
-      width: 100%;
-      height: 230px;
-      object-fit: cover;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-      transition: 0.3s;
-    }
-
-    .gallery img:hover {
-      transform: scale(1.03);
-    }
-
-    /* MUSIK */
-    .music-list {
-      display: grid;
-      gap: 20px;
-    }
-
-    .music {
-      background: white;
-      padding: 25px;
-      border-radius: 15px;
-      box-shadow: 0 5px 18px rgba(0,0,0,0.08);
-      text-align: center;
-    }
-
-    .music h3 {
-      color: #087a32;
-      margin-bottom: 15px;
-    }
-
-    audio {
-      width: 100%;
-      max-width: 700px;
-    }
-
-    /* FOOTER */
-    footer {
-      background: #064d20;
-      color: white;
-      text-align: center;
-      padding: 35px 20px;
-      margin-top: 30px;
-    }
-
-    footer strong {
-      font-size: 20px;
-    }
-
-    /* HP */
-    @media (max-width: 768px) {
-
-      header h1 {
-        font-size: 27px;
-      }
-
-      nav a {
-        padding: 11px 10px;
-        font-size: 14px;
-      }
-
-      .hero {
-        min-height: 430px;
-      }
-
-      .hero h2 {
-        font-size: 30px;
-      }
-
-      .hero p {
         font-size: 17px;
-      }
-
-      .program-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .gallery {
-        grid-template-columns: 1fr;
-      }
-
-      .gallery img {
-        height: 250px;
-      }
-
-      section {
-        padding: 45px 15px;
-      }
     }
-  </style>
+
+    nav a {
+        margin: 3px;
+        font-size: 13px;
+    }
+}
+
+</style>
+
 </head>
 
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <h1>MAISAR LINGKUANG AUA JAMBAK</h1>
-    <p>Bersama Membangun Nagari</p>
-  </header>
+<header>
 
-  <!-- MENU -->
-  <nav>
-    <ul>
-      <li><a href="#beranda">Beranda</a></li>
-      <li><a href="#profil">Profil</a></li>
-      <li><a href="#visi-misi">Visi &amp; Misi</a></li>
-      <li><a href="#program">Program</a></li>
-      <li><a href="#kegiatan">Kegiatan</a></li>
-      <li><a href="#musik">Musik</a></li>
-    </ul>
-  </nav>
+<h1>MAISAR LINGKUANG AUA JAMBAK</h1>
 
-  <!-- BERANDA -->
-  <section class="hero" id="beranda">
-    <div class="hero-content">
+<p>Bersama Membangun Nagari</p>
 
-      <h2>Membangun Nagari dengan HATI dan INTEGRITAS</h2>
+</header>
 
-      <p>
-        Bersama membangun Maisar Lingkuang Aua Jambak
-        dengan semangat kebersamaan, pelayanan,
-        dan kemajuan masyarakat.
-      </p>
 
-      <div class="hero-buttons">
-        <a href="#profil" class="btn">Kenali Lebih Dekat</a>
-        <a href="#visi-misi" class="btn btn-outline">Visi &amp; Misi</a>
-      </div>
+<nav>
 
-    </div>
-  </section>
+<a href="index.html" class="active">Beranda</a>
 
-  <!-- PROFIL -->
-  <section id="profil">
+<a href="profil.html">Profil</a>
 
-    <h2>Profil</h2>
+<a href="visi-misi.html">Visi & Misi</a>
 
-    <div class="card">
-      <h3>Tentang Maisar Lingkuang Aua Jambak</h3>
+<a href="program.html">Program</a>
 
-      <p>
-        Website ini menjadi media informasi dan komunikasi untuk
-        memperkenalkan gagasan, visi, misi, program serta kegiatan
-        Maisar Lingkuang Aua Jambak kepada masyarakat.
-      </p>
-    </div>
+<a href="kegiatan.html">Kegiatan</a>
 
-  </section>
+<a href="musik.html">Musik</a>
 
-  <!-- VISI MISI -->
-  <section id="visi-misi">
+</nav>
 
-    <h2>Visi &amp; Misi</h2>
 
-    <div class="card">
-      <img
-        src="assets/visi-misi-poster.png"
-        alt="Visi dan Misi Maisar Lingkuang Aua Jambak"
-        class="visi-img"
-      >
-    </div>
+<section class="hero">
 
-  </section>
+<div class="hero-content">
 
-  <!-- PROGRAM -->
-  <section id="program">
+<h2>MAISAR LINGKUANG AUA JAMBAK</h2>
 
-    <h2>Program</h2>
+<p>
+Membangun Nagari dengan HATI dan INTEGRITAS.
+</p>
 
-    <div class="program-grid">
+<p>
+Bersama membangun nagari dengan semangat kebersamaan,
+pelayanan dan kemajuan masyarakat.
+</p>
 
-      <div class="program">
-        <span>1</span>
-        <h3>Pelayanan Masyarakat</h3>
-        <p>
-          Meningkatkan pelayanan yang mudah, cepat dan terbuka
-          bagi seluruh masyarakat.
-        </p>
-      </div>
+<a href="profil.html" class="btn">
+Kenali Lebih Dekat
+</a>
 
-      <div class="program">
-        <span>2</span>
-        <h3>Pembangunan Nagari</h3>
-        <p>
-          Mendorong pembangunan yang merata dan bermanfaat
-          bagi masyarakat.
-        </p>
-      </div>
+<a href="visi-misi.html" class="btn">
+Visi & Misi
+</a>
 
-      <div class="program">
-        <span>3</span>
-        <h3>Pemberdayaan Masyarakat</h3>
-        <p>
-          Meningkatkan peran serta masyarakat dalam membangun
-          nagari secara bersama-sama.
-        </p>
-      </div>
+</div>
 
-      <div class="program">
-        <span>4</span>
-        <h3>Ekonomi Masyarakat</h3>
-        <p>
-          Mendorong berkembangnya potensi ekonomi dan usaha
-          masyarakat nagari.
-        </p>
-      </div>
+</section>
 
-      <div class="program">
-        <span>5</span>
-        <h3>Generasi &amp; Kebudayaan</h3>
-        <p>
-          Mendukung generasi muda serta menjaga adat,
-          budaya dan nilai-nilai kehidupan masyarakat.
-        </p>
-      </div>
 
-    </div>
+<section>
 
-  </section>
+<h2>Selamat Datang</h2>
 
-  <!-- KEGIATAN -->
-  <section id="kegiatan">
+<div class="card">
 
-    <h2>Kegiatan</h2>
+<h3>Tentang Website Maisar</h3>
 
-    <div class="gallery">
+<p>
+Website Maisar Lingkuang Aua Jambak menjadi media
+informasi dan komunikasi untuk memperkenalkan gagasan,
+visi, misi, program serta kegiatan kepada masyarakat.
+</p>
 
-      <img
-        src="assets/kegiatan-01.jpg"
-        alt="Kegiatan 1"
-      >
+<br>
 
-      <img
-        src="assets/kegiatan-02.jpg"
-        alt="Kegiatan 2"
-      >
+<p>
+Silakan gunakan menu di atas untuk melihat informasi
+Profil, Visi & Misi, Program, Kegiatan dan Musik.
+</p>
 
-      <img
-        src="assets/kegiatan-03.jpg"
-        alt="Kegiatan 3"
-      >
+</div>
 
-    </div>
+</section>
 
-  </section>
 
-  <!-- MUSIK -->
-  <section id="musik">
+<footer>
 
-    <h2>Musik</h2>
+<p>
+<strong>MAISAR LINGKUANG AUA JAMBAK</strong>
+</p>
 
-    <div class="music-list">
+<p>
+Bersama Membangun Nagari
+</p>
 
-      <div class="music">
-        <h3>Bersatu Membangun Nagari</h3>
+<p>
+&copy; 2026
+</p>
 
-        <audio controls>
-          <source
-            src="assets/(regge) BERSATU MEMBANGUN NAGARI.mp3"
-            type="audio/mpeg"
-          >
-          Browser Anda tidak mendukung pemutar audio.
-        </audio>
-      </div>
-
-      <div class="music">
-        <h3>Melangkah Bersama Maisar</h3>
-
-        <audio controls>
-          <source
-            src="assets/(regge) MELANGKAH BERSAMA MAISAR.mp3"
-            type="audio/mpeg"
-          >
-          Browser Anda tidak mendukung pemutar audio.
-        </audio>
-      </div>
-
-      <div class="music">
-        <h3>Maisar Pilihan Kita</h3>
-
-        <audio controls>
-          <source
-            src="assets/(remix) MAISAR PILIHAN KITA.mp3"
-            type="audio/mpeg"
-          >
-          Browser Anda tidak mendukung pemutar audio.
-        </audio>
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-
-    <p>
-      <strong>MAISAR LINGKUANG AUA JAMBAK</strong>
-    </p>
-
-    <p>
-      Bersama Membangun Nagari
-    </p>
-
-    <p>
-      &copy; 2026 Maisar Lingkuang Aua Jambak
-    </p>
-
-  </footer>
+</footer>
 
 </body>
 </html>
